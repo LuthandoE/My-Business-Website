@@ -1,0 +1,41 @@
+<!-- Image -->
+<div class="w3-image w3-padding-bottom  w3-hide-small">
+<img src="image/lue_logo.jpg" style="width:100%;height:90px"
+class="w3-card w3-responsive w3-round-xxlarge" />
+</div>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-inverse w3-round-xlarge w3-card-16 w3-black">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="index.php?d=<?php echo mt_rand(); ?>">Luespot</a>
+</div>
+<div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav">
+    <li class="active"><a href="index.php?<?php echo mt_rand(); ?>">Home</a></li>
+   
+    <li><a href="#" onclick="w3_open_nav('projects')">Projects <i class="fa fa-caret-down"></i></a></li>
+    <li> <a href="#" onclick="w3_open_nav('collection')"> Services
+          <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+    </li>
+    <li><a href="#" data-toggle="modal" data-target="#myModal">Contact Me</a></li>
+    <li><a href="#" onclick="w3_open_nav('luespot_about')">About Me <i class="fa fa-caret-down"></i> </a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+    <li>
+        <a href="#" onclick="w3_open_nav('about')">
+            <span class="glyphicon glyphicon-user">
+            </span> Luthando Dlamini
+        </a>
+       
+    </li>
+   <!-- <li><a href="#" onclick=" w3_open_nav('search')"><span class="fa fa-search w3-large"></span></a> </li> -->
+</ul>
+</div>
+</div>
+</nav>
