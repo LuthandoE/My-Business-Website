@@ -30,8 +30,9 @@
 
 <body>
   
+  
   <!-- Container  -->
-  <div class="container">
+  <div class="container ">
       <!-- Panel -->
      <div class="panel panel-default w3-card-12">
          <!-- Panel Header -->
@@ -43,13 +44,14 @@
          <?php include_once("about.htm") ?>
          </div>
      </div>
-     <div id="myPage" class="panel-body w3-card-16">
+     <?php include_once("mobService.htm"); ?>
+     <div id="myPage" class="panel-body w3-card-16 w3-hide-small w3-hide-medium">
         <div class="container-fluid">
-            <div class="w3-padding-64">&nbsp;</div>
+            <div class="w3-padding-32 ">&nbsp;</div>
             <div class="container-fluid w3-jumbo w3-animate-zoom  w3-margin-top
                w3-padding-bottom  w3-center">
                <!-- header txt -->
-               <div class="container-fluid w3-hide-small"> <h1 class="jmb" id="homeText"><strong>
+               <div class="container-fluid w3-hide-small w3-padding-top"> <h1 class="jmb" id="homeText"><strong>
                     <span class="fa fa-code w3-xxxlarge">
                     </span> Services <span class="fa fa-code w3-xxxlarge">
                     </span> </strong></h1></div>
@@ -83,7 +85,24 @@
 
                       </p>
                       
-                  </div></div>
+                  </div>
+                  <!-- Small Dev -->
+                   <div class="w3-card-2 w3-white w3-border-bottom w3-border-blue  w3-hide-large w3-hide-medium ">
+                      <header class="w3-black w3-card-16 w3-border-bottom w3-border-white">
+                      <h3 class="w3-padding w3-center ">Web Design</h3></header>
+                      <p class="w3-margin">
+                         User Experience (UX) is the lasting 
+                         feeling a user will have after visiting your site.
+                          
+                         So this is my first priority as a developer.   
+                         I'll work with Photoshop and Illustrator to create static visuals of
+                          your site and get them to a point where you're happy...!
+                      
+
+                      </p>
+                      
+                  </div>
+                  </div>
                   <!-- Third -->
                   <div class="w3-third w3-padding-left ">
                     <div class="w3-card-2 w3-white w3-border-bottom w3-border-blue " style="height:270px">

@@ -1,22 +1,5 @@
 <?php
-  
-    $message = "";
-    if(isset($_POST['submit'])){
-        
-        $to = "luthandodlamini94@gmail.com";
-        $name = $_POST['name'];
-       $from = $_POST['fromEmail'];
-       $headers = 'From: $from'. "\r\n".
-                    'Reply-To: $to'."\r\n".
-                    'X-Mailer: PHP'.phpversion();
-        $txt = $_POST['body'];
-        
-        mail($to,$name,$txt,$headers);
-        $message = "Email has been sent  successfully";
-
-    } else {
-        echo "Sorry, error occured!";
-    }
+   include_once("SendMail.php");
  ?>
 <!DOCTYPE html>
 <html>
@@ -29,9 +12,9 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="w3/w3.css" rel="stylesheet" />
+
     <link href="font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="assets/font-awesome-4.5.0/css/font-awesome.css" rel="stylesheet" />
-    
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
@@ -63,14 +46,14 @@
   .dropMargin { margin-top: -3px;}
 </style>
 </head>
-<body>
+<body class="w3-light-grey">
 <?php include_once("index_mob.htm") ?>
 <div class="container ">
 <!--Panel Starts  -->
 <div class="panel panel-default w3-card-12">
 <div class="panel-heading navbar-fixed-top">
 <!--Navigation Bar Begins  -->
-<?php// include_once("Navbar.htm") ?>
+<?php include_once("Navbar.htm") ?>
 
 <!--Navigation Bar Ends-->
 <!--Nav Projects -->
@@ -82,10 +65,11 @@
 <?php include_once("about.htm") ?>
 </div>
 
-<div id="myPage" class="panel-body w3-card-16">
+<div id="myPage" class="panel-body w3-card-16 ">
 <!--Panel Body Content  -->
 <div class="container-fluids">
-<div class="w3-padding-64">&nbsp;</div>
+<div class="w3-padding-64 w3-hide-small">&nbsp;</div>
+<div class="w3-padding-16 w3-hide-large">&nbsp;</div>
 <!-- Container  -->
 <div class="container-fluid w3-jumbo w3-animate-zoom  w3-margin-top 12 w3-padding-bottom  w3-center">
     <!-- My header  -->
@@ -96,74 +80,78 @@
     <!-- My slogan  -->
     <div class="w3-card-12 w3-border-bottom w3-border-orange w3-padding 
           w3-hide-small w3-margin-bottom w3-medium">
-    <p class="w3-text-blue textSlogan w3-animate-fading">"Good design adds value faster than it adds cost!"</p>
+    <p class="w3-text-blue textSlogan">"Mobile And Web Applications - First Class!"</p>
     </div>
 </div>
 <div class="row w3-padding-top w3-margin-top ">
 <!-- Column - Services   -->
 <div class="col-md-3">
-<div class="w3-card-24" style="width:100%">
+<div class="w3-card-24 " style="width:100%">
 <header class="w3-container w3-blue w3-margin-bottom w3-center">
     <h3>Services&nbsp; <span class="glyphicon glyphicon-thumbs-up "></span></h3></header>
 
-<div class="w3-center"> <img src="image/WT.jpg" class="img-circle " id="spin_img" /></div><hr />
-<a class="fa fa-facebook-square w3-text-indigo w3-xlarge" href="https://www.facebook.com/sihle.l.dlamini"style="margin-left:40px"></a>  &nbsp; 
-<a class="fa fa-twitter-square w3-xlarge w3-text-blue" href="https://twitter.com/LuthandoDlamini "></a> &nbsp;
-<a class="fa fa-google-plus-square w3-xlarge w3-text-red" href="https://plus.google.com/u/0/app/basic/103739394219354837528?tab=XX"></a>  &nbsp;
-<a class="fa fa-linkedin-square w3-text-blue-grey w3-xlarge" href="http://www.linkedin.com/in/luthando-dlamini-27392b98?trk=nav_responsive_tab_profile">
-</a> &nbsp; <hr />
+<div class="w3-center"> <img src="image/Business Logo 13.jpg" class="img-circle " id="spin_img" /></div><hr />
+<a class="w3-btn-floating  w3-indigo w3-xlarge" href="https://www.facebook.com/sihle.l.dlamini"style="margin-left:40px">
+   <span class="fa fa-facebook"></span>
+</a>
+<a class="w3-btn-floating w3-xlarge w3-blue" href="https://twitter.com/LuthandoDlamini ">
+   <span class="fa fa-twitter"></span>
+</a>
+<a class="w3-btn-floating w3-xlarge w3-red" href="https://plus.google.com/u/0/app/basic/103739394219354837528?tab=XX">
+   <span class="fa fa-google-plus"></span>
+</a>
+<a class="w3-btn-floating w3-blue-grey w3-xlarge" href="http://www.linkedin.com/in/luthando-dlamini-27392b98?trk=nav_responsive_tab_profile">
+   <span class="fa fa-linkedin"></span>
+</a><hr />
 
 <div class="w3-container ">
-<header class="w3-container w3-light-grey">
-    <p class="w3-large">Web Design</p>
-    <ul>
-    <li>Photoshop</li>
+<header class="w3-container w3-light-grey w3-round-xlarge">
+    <h5 class="w3-"><strong>Business Applications</strong></h5>
+    <ul class="w3-ul">
+    <li>Sales application.</li>
+    <li>Appoinment Booking.</li>
     </ul>
     
-    <p class="w3-large">Web Development</p>
-    <ul>
-    <li>HTML5</li>
-    <li>CSS3</li>
-    <li>W3.CSS</li>
-    <li>JavaScript</li>
-    <li>JQuery</li>
-    <li>AJAX
-    
-    <span class="w3-badge w3-red ">New</span>
-    </li>
-    <li>JSON</li>
-    <li>PHP 5</li>
-    <li>C#</li></ul>
-    
-      <p class="w3-large">Mobile Development</p>
-    <ul>
-      <li>Java</li>
-      <li>XML</li>
-      <li>JSON</li>
-      <li>JQuery Mobile</li>
+   <h5 class="w3-"><strong>Business Websites:</strong></h5>
+    <ul class="w3-ul">
+    <li>Stunning Website.</li>
+    <li>Website redesign.</li>
+    <li>SEO.</li>
+   <h5 class="w3-"><strong>Mobile Applications:</strong></h5>
+    <ul class="w3-ul">
+      <li>For Classic Marketing.</li>
+      <li>Appointment Booking.</li>
     </ul>
-        
-    <p class="w3-large">Promotion</p>
-    <ul>
-     <li>SEO</li>
-     <li>Email</li>
+    <h5 class="w3-"><strong>Business Branding:</strong></h5>
+    <ul class="w3-ul">
+        <li>Logos</li>
+        <li>Banners</li>
+        </ul>   
+    <h5 class="w3-"><strong>Professional Email:</strong></h5>
+    <ul class="w3-ul">
+     <li>Businness</li>
+     <li>Organisation</li>
+     <li>Individual</li>
     </ul>
 </header>
-
-
 </div>
+
 <div class="w3-card-2 w3-border-bottom w3-border-light-blue w3-padding-12"></div>
-</div></div>
+</div><br /></div>
+    
     <!--Column - intro -->
     <div class="col-md-9">
     <div class="w3-container ">
-    <div class="w3-card-24 w3-border-top w3-border-blue" 
-    style="background-image: url('image/')">
-    <header class="w3-container w3-center w3-black w3-margin-bottom w3-card-2 w3-border-bottom ">
-    <h3> Web &amp; Mobile Developer
-     </h3></header>
-    <div class="w3-container">
-    <p class=""> 
+    <div class="w3-card-24 w3-border-bottom w3-border-light-blue">
+   
+    <img src="image/banner 21.jpg" style="width: 100%;" />
+    </div>
+</div>
+<div><hr /></div>
+<div class="w3-container">
+    <div class="w3-card-24 w3-border-bottom w3-border-light-blue">
+    
+   <p class="w3-padding"> 
     <span class="header-text  w3-xlarge">Hi, I'm Luthando Dlamini a software developer based in Durban. </span>
        
         <span class="glyphicon glyphicon-star w3-text-deep-orange"></span>
@@ -171,17 +159,13 @@
         <span class="glyphicon glyphicon-star w3-text-deep-orange"></span>
     </p>
     <div class="w3-card-16 w3-border-bottom w3-border-light-grey w3-margin-bottom"></div>
-    <p>
+    <p class="w3-padding w3-border-bottom w3-border-light-grey">
       I have been designing and developing websites and mobile applications 
       for about three years now. You can find more 
       <a class="w3-text-blue" href="Services.php?d=<?php echo mt_rand(); ?>">here</a>.
-      <hr />
-      If you're in a business in need of a new website, mobile app, windows application
-      or an individual who want a personal website, get in touch - I'd love to work with you.
     </p>
-    </div>
-    
-    <div class="w3-card-2 w3-border-bottom w3-border-light-blue w3-padding-16"></div>
+    <p class="w3-padding">So if you're in a business in need of a new website, mobile app, windows application
+      or an individual who want a personal website, get in touch - I'd love to work with you.</p>
     </div>
 </div>
 <div><hr /></div>
@@ -207,14 +191,13 @@
    <a href="Services.php?d=<?php echo mt_rand(); ?>" class="w3-text-blue"> <i>See more</i></a> </p>
 <div class="w3-card-12 w3-border-bottom w3-border-light-grey w3-margin-bottom"></div>
 <div class="w3-center">
-<div class="w3-left"><a class="w3-btn-floating-large w3-black"
+<div class="w3-left"><a class="w3-btn-floating-large w3-black w3-hide-small w3-hide-meduim"
      href="Work.php?s=<?php echo mt_rand(); ?>"> <i class="fa fa-globe  "></i> </a>
-    <a class="w3-btn-floating-large w3-blue" href="Services.php?o=<?php echo mt_rand() ?>"> 
+    <a class="w3-btn-floating-large w3-hide-small w3-hide-meduim w3-blue" href="Services.php?o=<?php echo mt_rand() ?>"> 
     <i class="fa fa-code"> </i> </a>
-    <a class="w3-btn-floating-large w3-indigo "  data-toggle="modal" data-target="#myModal">
+    <a class="w3-btn-floating-large w3-indigo w3-hide-small w3-hide-meduim"  data-toggle="modal" data-target="#myModal">
     <i class="fa fa-phone-square"> </i> </a></div>
-    <a class="w3-btn-floating-large w3-blue w3-center" data-toggle="modal" data-target="#tutorialModal">
-    <i class="fa fa-book w3-padding-top w3-xxlarge"></i></a>
+    
 
     <div class="w3-right"><a href="https://github.com/LuthandoE" class="w3-btn-floating w3-purple">
     <i class="fa fa-github w3-animate-fading"></i></a>
@@ -229,23 +212,13 @@
 </div>
 </div>
 <div><hr /></div>
-<!--Container Skills -->
-<div class="w3-container ">
-<div class="w3-example w3-card-24 w3-border-top w3-border-white">
-  <br />
-  <div class="w3-image">
-      <img src="image/goe.jpg" class="w3-round-xxlarge" style="width: 100%;" /> 
-  </div>
-  <div class="w3-card-12 w3-border-bottom w3-border-light-grey w3-margin-bottom"></div>
-</div>
-</div>
 </div>
 </div>
 <div class="w3-card-12 w3-text-white"><hr  /></div>
 <div class="w3-padding-16"><h1 class="w3-center"><strong>Featured Projects</strong></h1></div>
 <div class="w3-card-16 w3-border-bottom w3-border-light-white w3-margin"></div>
 <!--Row Testimonials  -->
-<?php include_once("tm.htm") ?>
+<?php require_once("tm.htm") ?>
 
 </div>
 <div class="w3-card-16 w3-border-bottom w3-border-light-teal w3-margin"></div>
@@ -290,7 +263,6 @@
 </div>
 
 </div>
-<div class="w3-center" id="dt"></div>
 
 <!-- Footer -->
 <?php include_once("footer.htm")?>
@@ -361,53 +333,6 @@
 <?php include_once("ContactUs.php") ?>
 
 
-<script>
-function w3_open_nav(x) {
-if (document.getElementById("nav_" + x).style.display == "block") {
-    document.getElementById("").style.display = "block";
-    w3_close_nav(x);
-} else {
-    w3_close_nav("collection");
-    w3_close_nav("projects");
-    w3_close_nav("about");
-    //   w3_close_nav("testimonials");
-    w3_close_nav("luespot_about");
-   // w3_close_nav("search");
-    document.getElementById("nav_" + x).style.display = "block";
-    if (document.getElementById("navbtn_" + x)) {
-        document.getElementById("navbtn_" + x).getElementsByTagName("i")[0].style.display = "none";
-        document.getElementById("navbtn_" + x).getElementsByTagName("i")[1].style.display = "inline";
-    }
-}
-}
-function w3_close_nav(x) {
-document.getElementById("nav_" + x).style.display = "none";
-if (document.getElementById("navbtn_" + x)) {
-    document.getElementById("navbtn_" + x).getElementsByTagName("i")[0].style.display = "inline";
-    document.getElementById("navbtn_" + x).getElementsByTagName("i")[1].style.display = "none";
-}
-}
-</script>
-<script>
-(function startTime() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById('dt').innerHTML =
-    "Date: " + today.toDateString() + " Time: " + h + ":" + m + ":" + s;
-    var t = setTimeout(startTime, 500);
-})();
-function checkTime(i) {
-    if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
-    return i;
-}
-(function () {
-    d = new Date();
-    document.getElementById("dy").innerHTML = d.getFullYear();
-})();
-</script>
+<script src="js/NavTime.js"></script>
 </body>
 </html>
